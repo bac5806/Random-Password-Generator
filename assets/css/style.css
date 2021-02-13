@@ -1,0 +1,82 @@
+/* set to border-box */
+* {
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+}
+
+/* seet background color for body */
+body {
+    
+    background-color: lightgrey;
+}
+
+/* set background color for header */
+header {
+    background-color: rgb(8, 8, 66);
+}
+
+/* h1 tag font styling */
+header h1 {
+    text-align: center;
+    font-size: 56px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* set margin for main (main content) */
+main {
+    margin-top: 25px;
+}
+
+/* h2 tag styling */
+main h2 {
+    font-size: 44px;
+    margin: 25px;
+    padding: 25px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 3px solid black;
+}
+
+/* Create container for box where 
+   password will be generated.  */
+main .pswd_cont {
+    margin: 25px;
+    padding: 25px;
+    border: 3px dashed black;
+    background-color: white;
+}   
+
+/* p tag font styling for password container */
+.pswd_cont p {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+}
+
+
+/* create container for button */
+main .button_cont {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    padding: 25px;
+    border-top: 3px solid black;
+}
+
+/* style button container */
+.button_cont .button {
+    padding: 30px;
+    text-align: center;
+    background-color: rgb(180, 57, 57);
+    border-radius: 50px;
+    min-width: min-content;
+}
+
+/* p tag styling for button */
+.button p {
+    font-size: 36px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}

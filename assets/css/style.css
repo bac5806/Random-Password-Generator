@@ -44,15 +44,16 @@ main h2 {
 main .pswd_cont {
     margin: 25px;
     padding: 25px;
+    min-height: 150px;
     border: 3px dashed black;
     background-color: white;
 }   
 
 /* p tag font styling for password container */
-.pswd_cont p {
+.pswd_cont .password {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 24px;
+    font-size: 36px;
 }
 
 
@@ -66,16 +67,18 @@ main .button_cont {
 }
 
 /* style button container */
-.button_cont .button {
+.button_cont button {
     padding: 30px;
     text-align: center;
     background-color: rgb(180, 57, 57);
-    border-radius: 50px;
+    border-radius: 10px;
     min-width: min-content;
+    cursor: pointer;
+    border: 5px solid black;
 }
 
 /* p tag styling for button */
-.button p {
+button p {
     font-size: 36px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;

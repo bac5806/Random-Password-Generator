@@ -8,7 +8,7 @@ var upperCaseAlphabet = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', '
 var numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // special characters array
-var specialChars = ['!', '@', '#', '$', '%', '^', '&','*', '(', ')', '/', '_', '=', '+','~', '}', '{', '|', '`', ']', '[', '\\', '<', '>', ';', ':', '.'];
+var specialChars = ['!', '@', '#', '$', '%', '^', '&','*', '(', ')', '/', '_', '=', '+','~', '}', '{', '|', '`', ']', '[', '\\', '<', '>', ';', ':', '.', '?'];
 
 // generate and return random number 
 function randomNumberGen(length) {
@@ -54,7 +54,7 @@ function getPswd() {
         {
             case 0:
                 if (useLowerCase)
-                {
+                {   // get a random char from the lower case alphabet array
                     var randomChar = randomNumberGen(lowerCaseAlphabet.length);
                     randomPswd += lowerCaseAlphabet[randomChar];
                 }
@@ -62,6 +62,7 @@ function getPswd() {
             case 1:
                 if (useUpperCase)
                 {
+                    // get a random char from the upper case alphabet array
                     var randomChar = randomNumberGen(upperCaseAlphabet.length);
                     randomPswd += upperCaseAlphabet[randomChar];
                 }
@@ -69,6 +70,7 @@ function getPswd() {
             case 2:
                 if (useNumeric)
                 {
+                    // get a random char from the number array
                     var randomChar = randomNumberGen(numeric.length);
                     randomPswd += numeric[randomChar];
                 }
@@ -76,16 +78,20 @@ function getPswd() {
             case 3:
                 if (useSpecialChar)
                 {
+                    // get a random char from the special character array
                     var randomChar = randomNumberGen(specialChars.length);
                     randomPswd += specialChars[randomChar];
                 }
                 break;
         }
     }
-    console.log("Random Password: " + randomPswd);
-
-    // alert user with the randomly generated password
-    // alert(randomPswd);
-    document.getElementById("password").innerHTML = randomPswd;
+    // create element variable
+    var myElement = document.getElementById("password");
+    // shrink the font size if the password is longer than 65
+    if (randomPswd.length >= 65) {
+        myElement.setAttribute("style", "font-size: 24px;")   
+    }
+    // set text content of html element to the random password
+    myElement.textContent = randomPswd;
 }
 

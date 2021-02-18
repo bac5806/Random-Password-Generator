@@ -49,9 +49,14 @@ main .pswd_cont {
     background-color: white;
 }   
 
+/* styling id used for javascript text */
 #password {
+    font-size: 34px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 

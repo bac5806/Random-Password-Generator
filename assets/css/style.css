@@ -43,17 +43,15 @@ main h2 {
    password will be generated.  */
 main .pswd_cont {
     margin: 25px;
-    padding: 25px;
+    padding: 10px;
     min-height: 150px;
     border: 3px dashed black;
     background-color: white;
 }   
 
-/* p tag font styling for password container */
-.pswd_cont .password {
+#password {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 36px;
 }
 
 
